@@ -2,7 +2,7 @@ const express = require('express'); //pemanggilan modul di JS, tapi bukan ES15, 
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send({hi: 'there'});
+    res.send({hello: 'holla'});
 });
 //ada format tersendiri, get = command, / = router nya, req = reqques, res = respone
 

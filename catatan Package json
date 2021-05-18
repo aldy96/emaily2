@@ -5,3 +5,10 @@ run the "start" syntax first
 
 make .gitignored file, the function is for preventing commit to git for version control, because hiroku will
 install the dependencies by itself
+
+boiling-scrubland-57661
+https://boiling-scrubland-57661.herokuapp.com/ | https://git.heroku.com/boiling-scrubland-57661.git
+
+for instaling heroku    npm i -g heroku
+
+we have to configure the powershell restriction
