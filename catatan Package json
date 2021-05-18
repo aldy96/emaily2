@@ -1,0 +1,7 @@
+we have to describes node engine version, in order to telling the hiroku information about the node version
+
+we have to adding the "start" : "node index.js" syntax into the "script" syntax, in order to ordered the hiroku to 
+run the "start" syntax first
+
+make .gitignored file, the function is for preventing commit to git for version control, because hiroku will
+install the dependencies by itself
