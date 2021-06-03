@@ -15,4 +15,4 @@ passport.use(
         console.log('refreshToken:',refreshToken);
         console.log('profile:',profile);
     }
-)); //telling the passport with use "hey passport you can handle auth, but this is the more specific way"
+)); //telling the passport with use "hey passport you can handle auth, but this is the more specific ways"
