@@ -1,7 +1,16 @@
 const express = require('express'); //pemanggilan modul di JS, tapi bukan ES15, contoh di ES15 = "import e from "e" " framework untuk mempermudah Protokol HTTP
-require('./services/passport'); //hanya di butuhkan berjalan saja no need to assign
+const mongoos = require('mongoose'); //calling mongoose to connect with mongodb
+const keys = require('./config/keys');
+require('./models/User') // the code must be in order, call models user then passport, this argument for load Schema into mongoose
+require('./services/passport'); //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
 // const authRoutes = require('./routes/authRoutes'); bisa gini
 
+
+mongoos.connect(keys.mongoURI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+}) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
 
 const app = express();
 

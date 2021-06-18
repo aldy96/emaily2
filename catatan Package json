@@ -15,11 +15,14 @@ install the dependencies by itself
 ada 2 library yg di instal untuk passport, passport dan passport strategy
 strategy harus menggunakan google oauth20 
 
-for instaling heroku    npm i -g heroku
-boiling-scrubland-57661
-https://boiling-scrubland-57661.herokuapp.com/ | 
+for instaling heroku =   npm i -g heroku
+making new app =    heroku create 
 
-how to create remote repository = git remotw add heroku https://git.heroku.com/boiling-scrubland-57661.git
+boiling-scrubland-57661
+WebLink => https://boiling-scrubland-57661.herokuapp.com/ 
+Repo => https://git.heroku.com/boiling-scrubland-57661.git
+
+how to create remote repository = git remote add heroku https://git.heroku.com/boiling-scrubland-57661.git
 git push heroku master
 
 
@@ -31,3 +34,28 @@ node index.js this is the code for run the program
 
 nodemon is module to making server instaling by itself
 then edit package json file "dev": "nodemon index.js" in the script for running the program in development mode via "npm run dev"
+
+
+MongoDB
+user : p00gz
+Pass : XRiEhfUbrfrA3cI4
+connection String : mongodb+srv://p00gz:XRiEhfUbrfrA3cI4@emaily.qrasn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority //ganti password dan username nya
+
+user : aldy
+pass : 5g1BVWj5j4Z8WBn2
+connection String : 
+
+mongodb+srv://aldy:5g1BVWj5j4Z8WBn2@emaily.qrasn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+mongodb+srv://aldy:5g1BVWj5j4Z8WBn2@emaily.qrasn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+install mongoose
+
+create model class in mongoose its equal to create collection in mongodb, 
+create model intance in mongoose its equal to create records in mongodb,
+
+to prevent an error, we should'nt using require for continously, so we have to make model class object,
+2 argument :
+    1. to load Schema into it 
+    2. to fetch Schema from it 
+
+    
