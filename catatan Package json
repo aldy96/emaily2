@@ -51,11 +51,13 @@ mongodb+srv://aldy:5g1BVWj5j4Z8WBn2@emaily.qrasn.mongodb.net/myFirstDatabase?ret
 install mongoose
 
 create model class in mongoose its equal to create collection in mongodb, 
-create model intance in mongoose its equal to create records in mongodb,
+create model instance in mongoose its equal to create records in mongodb,
 
 to prevent an error, we should'nt using require for continously, so we have to make model class object,
 2 argument :
     1. to load Schema into it 
     2. to fetch Schema from it 
 
+before we adding new model instance into database, we must make sure there is no the same instance, 
+then we make a query which is asyncronous so we need to handle it with promise
     
