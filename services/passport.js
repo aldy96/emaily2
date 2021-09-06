@@ -13,9 +13,21 @@ passport.use(
         clientSecret: keys.googleClientSecret,
         callbackURL: '/auth/google/callback'
     }, 
+
     (accessToken, refreshToken, profile, done) => { 
-        new User({ googleId: profile.id }).save(); //assign data from google into Schema variable, probably this is an instance from class
-        
+        // untuk menambahkan new User({ googleId: profile.id }).save(); //assign data from google into Schema variable, probably this is an instance from class
+        // "schema" findOne (for looking a record with same id with parameter (parameter = berisi variable key and value yang di assign) then promise arrow function
+        User.findOne({ googleId: profile.id}).then(existingUser => {
+            if(existingUser){
+                //we already have a record with the given id
+                done(null, existingUser);
+            } else {
+                //we dont have a record with the given id
+                new User({ googleId: profile.id })
+                .save()
+                .then(user => {done(null, user)});
+            }
+        });
         
         console.log('accesssToken:', accessToken);
         console.log('refreshToken:',refreshToken);

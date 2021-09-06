@@ -30,7 +30,7 @@ we have to configure the powershell restriction
 
 googleClientID "we MUST using Capital "ID" to type in our code"
 
-node index.js this is the code for run the program
+"node index.js" this is the code for run the program
 
 nodemon is module to making server instaling by itself
 then edit package json file "dev": "nodemon index.js" in the script for running the program in development mode via "npm run dev"
