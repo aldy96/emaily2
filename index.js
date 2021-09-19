@@ -8,21 +8,21 @@ require('./models/User') // the code must be in order, call models user then pas
 // const authRoutes = require('./routes/authRoutes'); bisa gini
 
 
-mongoos.connect(keys.mongoURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-}) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
+// mongoos.connect(keys.mongoURI, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true,
+// }) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
 
 const app = express();
 
 //.use is function for mounting the middleware or function
-app.use(
-    cookieSession({
-        maxAge: 30 * 24 * 60 * 60 * 1000, //for determine the last of our cookie in browser (30 days)
-        keys: [keys.cookieKey], //this property is for encrypt the cookie
-    })
-); 
+// app.use(
+//     cookieSession({
+//         maxAge: 30 * 24 * 60 * 60 * 1000, //for determine the last of our cookie in browser (30 days)
+//         keys: [keys.cookieKey], //this property is for encrypt the cookie
+//     })
+// ); 
 
 //telling passport to assign authentication process to cookies Session
 app.use(passport.initialize());
