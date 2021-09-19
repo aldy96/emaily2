@@ -22,6 +22,8 @@ boiling-scrubland-57661
 WebLink => https://boiling-scrubland-57661.herokuapp.com/ 
 Repo => https://git.heroku.com/boiling-scrubland-57661.git
 
+
+befor push we must LOGIN to heroku first
 how to create remote repository = git remote add heroku https://git.heroku.com/boiling-scrubland-57661.git
 git push heroku master
 
@@ -61,3 +63,20 @@ to prevent an error, we should'nt using require for continously, so we have to m
 before we adding new model instance into database, we must make sure there is no the same instance, 
 then we make a query which is asyncronous so we need to handle it with promise
     
+//making cookies
+- first we must adding serialize and deserialize
+- second import cookie-session library
+- then import esxpress in index
+- determine the last of our cookie in browser and randomly generate cookiekey
+
+//Production
+a new database
+mongodb+srv://myuser:<oGzRwotI2xu0LEbA>@cluster0.rbjhx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+GOOGLE OAUTH 2.0 API
+- akses google oauth api di https://console.cloud.google.com/
+- new project
+- Enable API
+- Search google+ API
+- Klik enable
+- Create credential => Oauth client ID

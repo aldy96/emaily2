@@ -6,6 +6,18 @@ const keys = require("../config/keys");
 
 const User = mongoose.model('users'); //fetching the Schema, probably this is a class
 
+passport.serializeUser((user,done) => {
+    done(null, user.id);
+}); //this is for making user unique serial for sending to browser as cookies, 
+    //done = setiap selesai aktivitas passport "done" adalah callback nya
+    //karena ada 2 ID di mongodb, maka yang digunakan ID umum, bukan spesifik google
+
+passport.deserializeUser((id, done)=>{
+    User.findById(id).then(user => {
+        done(null, user);
+    });
+});
+
 passport.use(
     new GoogleStrategy( //function kemudian kita berikan clientID object sebagai parameter
     {
