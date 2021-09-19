@@ -12,7 +12,7 @@ module.exports = (app) =>{
     app.get('/auth/google/callback', passport.authenticate('google')); //pada sintaks ini, passport akan kembali melakukan request ke google tetapi dengan membawa code unik yg berasal dari hasil request yg pertama
     //route ini yang akan di tautkan bersama code dari google auth
 
-    app.get('api/logout', (req, res) => {
+    app.get('/api/logout', (req, res) => {
         req.logout();
         res.send(req.user);
     }) //untuk logout
