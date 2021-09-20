@@ -7,10 +7,9 @@
 //     module.export = require('./dev');
 // }
 
-module.exports = {
-    googleClientID: '7982080818-dagticjnbpgb768rj9atgqacmjdomkfv.apps.googleusercontent.com',
-    googleClientSecret: 'M20yz-maLrTvLg38xNZOk5gR',
-    mongoURI: 'mongodb+srv://myuser:oGzRwotI2xu0LEbA@cluster0.rbjhx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-    cookieKey: 'abc123',
-
-};
+module.exports={
+    googleClientID: process.env.GOOGLE_CLIENT_ID,
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    mongoURI: process.env.MONGO_URI,
+    cookieKey: process.env.COOKIE_KEY,
+}
