@@ -10,11 +10,11 @@ require('./models/User') //  the code must be in order, call models user then pa
 // const authRoutes = require('./routes/authRoutes'); bisa gini
 
 
-// mongoos.connect(keys.mongoURI, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true, ***
-// }) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
+mongoos.connect(keys.mongoURI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+ }) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
 
 const app = express();
 
