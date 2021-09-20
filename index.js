@@ -37,6 +37,10 @@ require('./routes/authRoutes')(app);
 app.get('/', (req, res) => { 
     res.send({hello: 'bearly'});
 });
+
+app.get('/auth/google/callback', (req, res) => { 
+    res.send({Berhasil: 'Dinosaurus'});
+});
 //ada format tersendiri, get = command, / = router nya, req = reqques, res = respone
 
 //app as an express, get is type of methode, "auth/google" as router, passport as callback
