@@ -2,27 +2,29 @@ const express = require('express'); //pemanggilan modul di JS, tapi bukan ES15, 
 const mongoos = require('mongoose'); //calling mongoose to connect with mongodb
 const cookieSession = require('cookie-session'); // for handling cookie and session
 const passport = require('passport'); //we need it for handling cookies too
-// const keys = require('./config/keys');
-// require('./models/User') // the code must be in order, call models user then passport, this argument for load Schema into mongoose
-// require('./services/passport'); //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
-// // const authRoutes = require('./routes/authRoutes'); bisa gini
+const keys = require('./config/keys');
+// require('./models/User') // *** the code must be in order, call models user then passport, this argument for load Schema into mongoose
+// require('./services/passport');*** //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
+
+
+// const authRoutes = require('./routes/authRoutes'); bisa gini
 
 
 // mongoos.connect(keys.mongoURI, {
 //     useNewUrlParser: true,
 //     useCreateIndex: true,
-//     useUnifiedTopology: true,
+//     useUnifiedTopology: true, ***
 // }) //settingan default dari petunjuk di Udemy, untuk koneksi ke mongoDB
 
 const app = express();
 
 //.use is function for mounting the middleware or function
-app.use(
-    cookieSession({
-        maxAge: 30 * 24 * 60 * 60 * 1000, //for determine the last of our cookie in browser (30 days)
-        keys: [keys.cookieKey], //this property is for encrypt the cookie
-    })
-); 
+// app.use(
+//     cookieSession({
+//         maxAge: 30 * 24 * 60 * 60 * 1000, //for determine the last of our cookie in browser (30 days)
+//         keys: [keys.cookieKey], //this property is for encrypt the cookie
+//     })
+// ); ***
 
 //telling passport to assign authentication process to cookies Session
 app.use(passport.initialize());
@@ -32,9 +34,9 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 
 
-app.get('/', (req, res) => { 
-    res.send({hello: 'bearly'});
-});
+// app.get('/', (req, res) => { 
+//     res.send({hello: 'bearly'});
+// });
 //ada format tersendiri, get = command, / = router nya, req = reqques, res = respone
 
 //app as an express, get is type of methode, "auth/google" as router, passport as callback
