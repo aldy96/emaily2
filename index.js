@@ -3,7 +3,7 @@ const mongoos = require('mongoose'); //calling mongoose to connect with mongodb
 const cookieSession = require('cookie-session'); // for handling cookie and session
 const passport = require('passport'); //we need it for handling cookies too
 const keys = require('./config/keys');
-// require('./models/User') // *** the code must be in order, call models user then passport, this argument for load Schema into mongoose
+require('./models/User') //  the code must be in order, call models user then passport, this argument for load Schema into mongoose
 // require('./services/passport');*** //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
 
 
