@@ -4,7 +4,7 @@ const cookieSession = require('cookie-session'); // for handling cookie and sess
 const passport = require('passport'); //we need it for handling cookies too
 const keys = require('./config/keys');
 require('./models/User') //  the code must be in order, call models user then passport, this argument for load Schema into mongoose
-// require('./services/passport');*** //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
+require('./services/passport'); //hanya di butuhkan berjalan saja no need to assign, this argument for fetch Schema from mongoose
 
 
 // const authRoutes = require('./routes/authRoutes'); bisa gini
