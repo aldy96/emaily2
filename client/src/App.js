@@ -12,7 +12,7 @@ function App() {
         <a
           className="App-link"
           href="/auth/google"
-          rel="noopener noreferrer"
+          
         >
           Login To Google
         </a>
