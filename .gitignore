@@ -1,4 +1,4 @@
 # simpan disini maka tidak akan diupload ke git
-node_modules
-dev.js
+# node_modules
+# dev.js
 # catatan.txt
