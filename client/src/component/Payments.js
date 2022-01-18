@@ -3,7 +3,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 class Payments extends React.Component{
     render() {
-        debugger;
+        
 
         return(
             <StripeCheckout
